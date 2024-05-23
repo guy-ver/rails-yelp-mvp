@@ -1,0 +1,13 @@
+<div class="container m-4 p-4">
+  <h1 class="mb-4">Add a new restaurant</h1>
+    <%= simple_form_for(@restaurant) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :category, collection: ['French', 'Belgian', 'Chinese', 'Japanese', 'Italian' ] %>
+      <%= f.input :phone_number %>
+      <%= f.submit class: "btn btn-info" %>
+    <% end %>
+    <div class="mt-4">
+      <%= link_to '🔙', restaurants_path, class: "btn btn-info" %>
+    </div>
+</div>

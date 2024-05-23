@@ -1,0 +1,12 @@
+<div class="container m-4 p-4">
+  <h2>Add a new review!</h2>
+  <%=  render 'form', restaurant: @restaurant, review: @review %>
+
+    <div class="mt-4">
+      <%= link_to "🔙 #{@restaurant.name}", restaurant_path(@restaurant.id), class: 'text-decoration-none' %>
+    </div>
+    <div class="mt-4">
+      <%= link_to '🔙', restaurants_path, class: "btn btn-info" %>
+    </div>
+
+</div>

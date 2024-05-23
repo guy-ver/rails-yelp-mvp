@@ -1,0 +1,13 @@
+<div class="container m-4 p-4">
+
+  <h1>YELP, The restaurant reviewer</h1>
+
+    <div>
+      <% @restaurants.each do |restaurant| %>
+      <%= link_to restaurant.name, restaurant_path(restaurant), class: "card mt-4 p-4 text-decoration-none" %>
+      <% end %>
+    </div>
+    <div class="mt-4">
+      <%= link_to '➕', new_restaurant_path, class: "btn btn-info" %>
+    </div>
+</div>

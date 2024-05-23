@@ -1,0 +1,18 @@
+<div class="container m-4 p-4">
+
+  <h1>Welcome to <%= @restaurant.name %></h1>
+
+    <div class="card mt-4 p-4">
+      <p>🍽️ <%= @restaurant.category %></p>
+      <p>📍 <%= @restaurant.address %></p>
+      <p>📞 <%= @restaurant.phone_number %></p>
+   </div>
+
+    <div class="mt-4">
+      <%= link_to '🔙', restaurants_path, class: "btn btn-info" %>
+    </div>
+
+    <div class="mt-4">
+      <%= link_to '➕ Review', new_restaurant_review_path(@restaurant.id), class: "btn btn-info" %>
+    </div>
+</div>
